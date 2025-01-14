@@ -1,207 +1,102 @@
+/* Genel Stil */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Modern bir yazı tipi */
+    background-color: #1b1b1b; /* Arka plan koyu */
+    color: whitesmoke;
+}
+
 .topbar-container {
     display: flex;
-    flex-wrap: wrap; /* Elemanların taşmasına izin ver */
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    gap: 10px; /* Boşluk bırak */
-    box-sizing: border-box; /* Genişlik hesaplamasını doğru yap */
-    width: 100%; /* Konteynerin tam genişliğini kapla */
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #1c1c1c, #2e2e2e); /* Hafif bir geçiş efekti */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Hafif gölge */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-.logo-col, .name-col, .top-link {
-    flex: 1 1 150px; /* Esnek genişlik ve minimum genişlik */
-    text-align: center;
-    box-sizing: border-box; /* İç ve dış boşlukları dahil et */
-    margin-top: 20px;
+/* Logo ve Şirket Adı */
+.logo-name-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Logo ve şirket adı arasında boşluk */
 }
 
-
-
-.name-col {
-    white-space: nowrap; /* Metni tek satırda tut */
-    flex: 2; /* Şirket adı için daha geniş alan */
+.company-logo {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease; /* Hover için animasyon */
 }
 
-.top-link {
-    flex: 1; /* Diğer linklere eşit alan */
+.company-logo:hover {
+    transform: scale(1.1); /* Hover'da büyütme efekti */
 }
 
-
-.link-label {
-    text-decoration: none; /* Alt çizgiyi kaldır */
-    color: whitesmoke; /* Yazı rengi */
-    font-size: 20px; /* Yazı boyutu */
+.company-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: whitesmoke;
+    margin: 0;
 }
 
-@media(min-width:985px){
-.logo-col, .name-col{
-    margin-left: 20px;
-}
-}
-
-@media (min-width: 769px) and (max-width: 984px) {
-    .topbar-container {
-        flex-wrap: wrap; /* Taşmaya izin ver */
-        gap: 5px; /* Daha dar boşluklar */
-    }
-
-    .name-col {
-        flex: 2; /* Şirket adı için daha geniş alan */
-        font-size: 35px; /* Daha küçük yazı boyutu */
-    }
-
-    .top-link {
-        flex: 1 1 100px; /* Linkler için daha küçük esnek alan */
-        margin: 0 5px; /* Kenar boşluklarını azalt */
-    }
-
-    .link-label {
-        font-size: 16px; /* Daha küçük yazı boyutu */
-    }
+/* Navigasyon Linkleri */
+.navigation {
+    display: flex;
+    gap: 25px; /* Linkler arasında boşluk */
 }
 
+.nav-link {
+    text-decoration: none;
+    font-size: 18px;
+    color: whitesmoke;
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Hover animasyonu */
+    position: relative;
+}
 
+.nav-link:hover {
+    color: #00adb5; /* Hover'da farklı renk */
+    border-bottom: 2px solid #00adb5; /* Alt çizgi efekti */
+}
 
+/* Sosyal Medya İkonları */
+.social-icons {
+    display: flex;
+    gap: 15px; /* İkonlar arasında boşluk */
+}
+
+.social-logo {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Hover animasyonu */
+}
+
+.social-logo:hover {
+    transform: scale(1.2); /* Hover'da büyütme efekti */
+    opacity: 0.8; /* Hafif şeffaflık */
+}
+
+/* Responsive Tasarım */
 @media (max-width: 768px) {
     .topbar-container {
-        display: flex;
-        flex-direction: column; /* Elemanları dikey hizala */
-        justify-content: center; /* Dikeyde merkezle */
-        align-items: center; /* Yatayda merkezle */
-        gap: 15px; /* Elemanlar arasında boşluk bırak */
-        padding: 10px; /* Konteyner kenar boşlukları */
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Elemanlar arasında boşluk */
     }
 
-    .logo-col, .name-col, .top-link {
-        flex: none; /* Esnek genişlik devre dışı */
-        width: auto; /* Elemanların doğal genişliklerini kullan */
-        text-align: center; /* Yazıları ortala */
-        margin: 0; /* Margin boşluklarını kaldır */
+    .navigation {
+        gap: 15px; /* Linkler arasında daha küçük boşluk */
     }
 
-    .name-col {
-        margin-top: 10px; /* Şirket adının logodan sonra boşluğu */
-    }
-
-    .top-link {
-        margin-bottom: 10px; /* Linkler arasında boşluk bırak */
-    }
-}
-
-@media (min-width: 769px) and (max-width: 839px) {
-    .topbar-container {
-        flex-wrap: wrap; /* Taşmaya izin ver */
-        gap: 5px; /* Daha küçük boşluk */
-    }
-
-    .name-col {
-        flex: 2; /* Şirket adı için daha geniş alan */
-        font-size: 35px; /* Şirket adı yazı boyutunu küçült */
-    }
-
-    .top-link {
-        flex: 1; /* Linklerin eşit alan kullanmasını sağla */
-        font-size: 18px; /* Yazı boyutunu küçült */
-    }
-}
-
-
-@media (max-width: 480px) {
     .company-name {
-        font-size: 30px; /* Daha küçük yazı boyutu */
+        font-size: 20px;
     }
 
-    .link-label {
-        font-size: 16px; /* Daha küçük yazı boyutu */
-    }
-
-    .instagram-logo, .whatsapp-logo {
-        width: 30px; /* Logoları küçült */
+    .social-logo {
+        width: 30px;
         height: 30px;
     }
-}
-
-.logo-col {
-    display: flex;
-    justify-content: center; /* Logoyu ortala */
-    align-items: center; /* Dikey hizalama */
-    flex: 0 0 auto; /* Genişliğin büyümesini engelle */
-    margin-right: 10px; /* Şirket adı ile logo arasına boşluk ekle */
-}
-
-.name-col {
-    display: flex;
-    justify-content: flex-start; /* Şirket adını sola hizala */
-    align-items: center; /* Dikey hizalama */
-    flex: 0 0 auto; /* Genişliğin büyümesini engelle */
-    white-space: nowrap; /* Tek satırda tut */
-}
-
-
-
-
-.company-logo{
-    width: 100px;
-    height: 100px;
-}
-
-.company-name{
-    font-size: 40px;
-    font-family: 'Pacifico', cursive;
-    color: whitesmoke;
-}
-
-.social-col {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    display: flex;
-    flex-wrap: nowrap; /* Taşmayı engeller */
-    gap: 10px;
-    background-color: #000000;
-    padding: 10px;
-    border-radius: 10px;
-    max-width: calc(100% - 20px); /* Genişliği viewport içine al */
-}
-
-
-
-
-.instagram-logo{
-    width: 40px;
-    height: 40px;
-}
-
-.whatsapp-logo{
-    width: 40px;
-    height: 40px;
-}
-
-.instagram-logo:hover{
-    width: 50px;
-    height: 50px;
-}
-
-.whatsapp-logo:hover{
-    width: 50px;
-    height: 50px;
-}
-
-.top-link{
-    display: flex; /* Flexbox etkinleştir */
-    justify-content: center; /* Yatayda ortala */
-    align-items: center; /* Dikeyde ortala */
-}
-
-.link-label{
-    font-size: 25px;
-    font-family: 'Jersey-15';
-    color: whitesmoke;
-    text-decoration: none;
-}
-
-.link-label:hover {
-    color: lightgray;
-    font-size: 30px;
 }
