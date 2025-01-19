@@ -1,22 +1,15 @@
-/* Genel Stil */
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif; /* Modern bir yazı tipi */
-    background-color: #1b1b1b; /* Arka plan koyu */
-    color: whitesmoke;
-}
-
 .topbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background: linear-gradient(90deg, #1c1c1c, #2e2e2e); /* Hafif bir geçiş efekti */
+    background: black;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Hafif gölge */
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+     top: 0; /* Sayfanın en üstüne sabitle */
+    left: 0; /* Soldan hizala */
+    width: calc(100% - 17px); /* Scrollbar genişliğini hesaba kat */
+    position: fixed; /* Sabit pozisyon */
+    z-index: 1000; /* Diğer elemanların üstünde görünsün */
 }
 
 /* Logo ve Şirket Adı */

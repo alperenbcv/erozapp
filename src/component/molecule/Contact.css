@@ -1,0 +1,50 @@
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
+  }
+  
+  .contact-details {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .contact-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-card i {
+    font-size: 24px;
+    color: #5400b5;
+    margin-bottom: 10px;
+  }
+  
+  .contact-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .contact-card p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .google-maps {
+    flex: 1;
+    min-height: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
