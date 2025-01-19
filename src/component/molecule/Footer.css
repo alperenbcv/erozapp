@@ -1,0 +1,56 @@
+.footer-container {
+    background-color: #222; /* Koyu arka plan */
+    color: #fff; /* Beyaz yazı rengi */
+    padding: 40px 20px; /* İçerik boşluğu */
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Bölümleri eşit aralıklarla yerleştir */
+    gap: 20px; /* Bölümler arasında boşluk */
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 250px; /* Küçük ekranlar için minimum genişlik */
+  }
+  
+  .footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #00adb5; /* Başlıklarda modern bir mavi ton */
+  }
+  
+  .footer-section p {
+    margin: 5px 0;
+    line-height: 1.5;
+    color: #ccc; /* Hafif gri metin */
+  }
+  
+  .footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* İkonlar arasındaki boşluk */
+  }
+  
+  .footer-icons a {
+    color: #fff; /* İkon rengi */
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-icons a:hover {
+    color: #00adb5; /* Hover efektiyle mavi renk */
+  }
+  
+  .footer-bottom {
+    margin-top: 30px;
+    border-top: 1px solid #444; /* Üst çizgi */
+    padding-top: 10px;
+    font-size: 12px; /* Alt bilgi yazı boyutu */
+    color: #aaa;
+  }
+  

@@ -65,6 +65,12 @@
     max-width: 100%; /* Ekrana tam oturtur */
     height: auto; /* Oranını korur */
     border-radius: 10px; /* Hafif yuvarlatılmış köşeler */
+    transition: transform 0.3s ease; /* Hover sırasında büyüme animasyonu */
+}
+
+.product-img:hover {
+    transform: scale(1.1); /* Hover sırasında %10 büyütme */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Hafif bir gölge efekti */
 }
 
 @media (max-width: 768px) {

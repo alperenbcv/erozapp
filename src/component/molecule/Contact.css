@@ -1,50 +1,61 @@
 .contact-container {
     display: flex;
     flex-wrap: wrap;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    gap: 20px;
+    background: #f9f9f9; /* Hafif gri arka plan */
+    padding: 30px;
+    border-radius: 15px;
+    gap: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    margin-left: 1%;
   }
   
   .contact-details {
     flex: 1;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Kartları iki sütun halinde düzenler */
     gap: 20px;
   }
   
   .contact-card {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
+    background: #ffffff; /* Beyaz arka plan */
+    border: 1px solid #e0e0e0; /* Hafif gri çerçeve */
+    border-radius: 15px;
+    padding: 25px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* Hafif gölge */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Hover animasyonu */
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-5px); /* Hover'da hafif yukarı kaldırma efekti */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Daha belirgin gölge */
   }
   
   .contact-card i {
-    font-size: 24px;
-    color: #5400b5;
-    margin-bottom: 10px;
+    font-size: 28px; /* Daha büyük ikon */
+    color: #007bff; /* Mavi tonlarda ikon rengi */
+    margin-bottom: 15px;
   }
   
   .contact-card h3 {
-    font-size: 18px;
+    font-size: 20px;
     margin: 10px 0;
     color: #333;
+    font-weight: 600; /* Daha kalın başlık */
   }
   
   .contact-card p {
-    font-size: 14px;
-    color: #666;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5; /* Daha iyi okunabilirlik için satır yüksekliği */
   }
   
   .google-maps {
     flex: 1;
-    min-height: 300px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    min-height: 400px;
+    border: 1px solid #e0e0e0; /* Harita çerçevesi */
+    border-radius: 15px; /* Köşeleri yuvarlat */
     overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hafif gölge */
   }
   

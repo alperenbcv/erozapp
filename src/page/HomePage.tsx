@@ -4,6 +4,7 @@ import './HomePage.css';
 import AboutUs from '../component/molecule/AboutUs';
 import Products from '../component/molecule/Products';
 import Contact from '../component/molecule/Contact';
+import Footer from '../component/molecule/Footer';
 
 function HomePage() {
   return (
@@ -18,6 +19,7 @@ function HomePage() {
       <div className="row">
         <Contact />
       </div>
+      <Footer />
     </div>
   );
 }

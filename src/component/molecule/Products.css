@@ -1,15 +1,19 @@
-.product-genel-col{
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 10%;
-    margin-bottom: 10%;
+.product-genel-col {
+  margin: 5% 10%; /* Daha simetrik boşluk */
 }
 
-.product-genel-head{
-    color: black;
-
+.product-genel-head {
+  color: #333;
+  font-size: 32px; /* Daha büyük başlık */
+  margin-bottom: 15px;
+  text-align: center; /* Ortalanmış başlık */
+  font-weight: 600;
 }
 
-.product-genel-text{
-    color: black;
+.product-genel-text {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6; /* Daha iyi okunabilirlik */
+  text-align: justify; /* Metni daha düzgün hizalar */
+  margin-top: 10px;
 }
